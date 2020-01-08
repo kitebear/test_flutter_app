@@ -5,9 +5,17 @@ import 'stateFulWidget.dart';
 class TestRouter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(routes: {
-      "RandomWordsState": (context) => new RandomWords(),
-    }, title: 'Flutter Demo', home: TestOnePage());
+    return MaterialApp(
+      routes: {
+        "RandomWordsState": (context) => new RandomWords(),
+      }, 
+      title: 'Flutter Demo',
+      home: TestOnePage(),
+      theme: new ThemeData(
+        primaryColor: Colors.white,
+        textTheme: const TextTheme(body1: TextStyle(color: Colors.purple))
+      ),
+    );
   }
 }
 
